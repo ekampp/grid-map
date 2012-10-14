@@ -4,5 +4,15 @@
 
 .row-fluid
   = simple_form_for @map do |form|
-    %section.span3.offset9
-      .container-fluid= render form
+    %section.span7.offset1
+      / TODO: Insert interactive map here!
+      Hej
+
+    %section.span2
+      .container-fluid
+        = render form
+        .row-fluid
+          .span12
+            .btn-group
+              = link_to t(".cancel"), maps_path, class: "btn"
+              = form.button :submit, class: "btn-success disabled", disabled: true
