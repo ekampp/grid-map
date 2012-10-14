@@ -1,0 +1,9 @@
+.row-fluid
+  .span6.offset3
+    %h1.center Your recent maps
+
+.row-fluid
+  .span6.offset3
+    - if @maps.empty?
+      %hr
+      %center= link_to t(".new", default: "Create a new map"), new_map_path, class: "btn btn-success btn-extra-large"
