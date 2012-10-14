@@ -1,0 +1,8 @@
+.row-fluid
+  %header.span6.offset3
+    %h1.center Create a new map
+
+.row-fluid
+  = simple_form_for @map do |form|
+    %section.span3.offset9
+      .container-fluid= render form

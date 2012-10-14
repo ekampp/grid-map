@@ -11,6 +11,7 @@ gem 'puma'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: :static
+gem 'simple_form'
 
 # Database
 gem 'bson_ext'
@@ -30,4 +31,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'mongoid-rspec'
+  gem 'ruby_gntp'
 end
