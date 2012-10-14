@@ -6,5 +6,6 @@
 
 jQuery ->
   # Debugger settings
-  debug.setLevel(3)
+  window.default_debug_level = 3
+  debug.setLevel(default_debug_level)
   debug.info("Application loaded")
