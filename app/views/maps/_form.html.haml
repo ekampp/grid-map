@@ -5,3 +5,17 @@
 .row-fluid
   .span12
     = form.input :description, as: :text, input_html: { rows: 5 }, label: false
+
+.row-fluid
+  .span12
+    = form.input :size, label: false
+
+= content_for :js do
+  :javascript
+    $("#map_size").on("change", function(){
+      debug.setLevel(4);
+      value = parseInt($(this).val(), 10);
+      if(isNaN(value)) value = parseInt('#{Map.default_grid_size}', 10);
+      debug.debug("Setting grid size", value);
+      debug.setLevel(default_debug_level)
+    })
