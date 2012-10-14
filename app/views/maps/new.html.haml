@@ -1,12 +1,12 @@
 .row-fluid
   %header.span6.offset3
-    %h1.center Create a new map
+    %h1 Create a new map
 
 .row-fluid
   = simple_form_for @map do |form|
     %section.span7.offset1
       / TODO: Insert interactive map here!
-      Hej
+      #map-container
 
     %section.span2
       .container-fluid
@@ -15,4 +15,8 @@
           .span12
             .btn-group
               = link_to t(".cancel"), maps_path, class: "btn"
+              = link_to t(".update"), "#", class: "btn", id: "update"
               = form.button :submit, class: "btn-success disabled", disabled: true
+
+= content_for :js do
+  = javascript_tag "$('#update').hide()"
