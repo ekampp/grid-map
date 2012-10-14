@@ -1,8 +1,9 @@
 #= require jquery
 #= require jquery_ujs
-#= require bootstrap
+#= require debug
 #= require_tree .
 
-$ = jQuery
-$(document).ready ->
-  console.log("Loaded application")
+jQuery ->
+  # Debugger settings
+  debug.setLevel(3)
+  debug.info("Application loaded")
