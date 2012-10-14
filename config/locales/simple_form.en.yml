@@ -15,8 +15,7 @@ en:
       map:
         name: Name your map
         description: Describe your map
-        size_x: Grid X
-        size_y: Grid Y
+        size: Grid size
 
     # Labels and hints examples
     # labels:
